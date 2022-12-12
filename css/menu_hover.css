@@ -1,0 +1,73 @@
+/************************** tour_info **************************/ 
+.tour_info .inner{
+    padding: 100px 0;
+    position: relative;
+}
+.tour_info #p_logo{
+    position: absolute;
+    top: -55px; left: 820px;
+}
+.tour_info p img{
+    width: 280px;
+}
+.tour_info .inner span{
+    font-family: 'Tenada', sans-serif;
+    font-size: 1.8rem;    
+}
+.tour_info .inner h2{
+    display: block; 
+    text-align: center;
+    margin-bottom: 50px;
+}
+.tour_info .inner .ways{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.tour_info .inner a{
+    width: 30%; height: 350px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    border: #004f9e 1px solid;
+    border-radius: 175px;    
+    font-weight: 700;
+    color: #fff;    
+}
+.tour_info .inner a .tour_pic{
+    height: 350px;
+}
+.tour_info .inner a .info_detail{
+    padding-top: 130px;
+    font-size: 1.2rem;
+}
+.tour_info .inner a .info_title{
+    font-size: 1.8rem;
+}
+.tour_info .ways div{
+    height: 350px;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.ways_img01:hover div{
+    transform: translateY(-105%);
+    transition: 1s;
+}
+.ways_img01:hover a{    
+    box-shadow: 3px 3px 5px #666;
+}
+
+.tour_info .inner #ways_img01{
+    background-image: url(../images/street\ pic.png);
+    background-position: center;
+}
+.tour_info .inner #ways_img02{
+    background-image: url(../images/food\ pic.png);
+    background-position: center;
+}
+.tour_info .inner #ways_img03{
+    background-image: url(../images/bus\ pic.png);
+    background-position: center;
+}

@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); 
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+ul,ol,li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.inner{
+    max-width: 1200px;  /* 반응형 너비 지정 기본 */
+    margin: 0 auto;
+}
+/************************** header **************************/ 
+header{background-color: rgba(255, 255, 255, .3);}
+header .inner{
+    display: flex;
+    height: 80px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1 img{
+    position: relative;
+    width: 25%;  
+    margin-top: 10px;           
+}          
+header .inner ul{
+    width: 70%;               
+    display: flex;
+    justify-content: space-between;                
+    font-size: 1.2rem;
+    font-weight: 500; 
+}
+header .inner ul li{
+    font-size: 1.4rem;
+}
+header .inner ul li a:hover{
+    color: #f29100;    
+}
+
+header .inner .nav_btn a:nth-child(1){
+    position: relative;
+    margin: 0 15px 10px 0;
+    padding: 9px 8px;    
+    border-radius: 60%;
+    background-color: #52575d;
+    color: #FFF;
+    font-size: .8rem;
+    font-weight: 500;
+}    
+header .inner .nav_btn a:nth-child(2){
+    position: relative;
+    width: 15px;
+    top: 3px;
+}
+/************************** main_slide **************************/ 
+.main_slide{
+    height: 840px;
+    text-align: center;
+}
+.main_slide img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/************************** mid_banner **************************/ 
+.mid_banner{
+    background-color: #e1edfa;
+}
+.mid_banner .inner{
+    position: relative;
+    padding: 10px 0;
+}
+.mid_banner .inner img:nth-child(1){
+    display: inline-block;
+    width: 60px;
+    position: absolute;
+    top: 13px; left: 150px;
+}
+.mid_banner .inner img:nth-child(2){
+    display: inline-block;
+    width: 80px;
+    position: absolute;
+    top: 50px; left: 950px;    
+}
+.mid_banner .inner p{
+    display: block;
+    color: #004f9e;
+    text-align: center;
+    padding: 3px 0;
+    font-size: 1.2rem;
+}
+.mid_banner .inner #title_discript{
+    padding-bottom: 1px;
+}
+.mid_banner .inner #title_name{
+    font-size: 2.5rem;
+}
+.mid_banner .inner span{
+    font-family: 'Tenada', sans-serif;
+}
+/************************** video_sect **************************/ 
+.video_sect .inner{
+    position: relative;
+}
+.video_sect .inner img, .video_sect .inner .inner_2 p{
+    display: inline-block;
+}
+.video_sect .inner img:nth-child(1){
+    width: 250px;
+    position: absolute;
+    top: -26px; left: 280px;
+}
+.video_sect .inner img:nth-child(2){
+    width: 80px;
+    position: absolute;
+    top: 150px; left: -120px;
+}
+.video_sect .inner img:nth-child(3){
+    width: 60px;
+    position: absolute;
+    top: 482px; left: 450px;
+}
+.video_sect .inner img:nth-child(4){
+    width: 80px;
+    position: absolute;
+    top: 250px; left: 1200px;
+}
+.video_sect .inner .inner_2{
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.video_sect .inner .inner_2 .txt_box{
+    display: inline-block;
+    width: 37%;
+    padding-top: 300px;
+    font-size: 1.1rem;
+}
+.video_sect .inner .inner_2 .txt_box span{
+    font-family: 'Tenada', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.video_sect .inner .inner_2 .txt_box p:nth-child(2){
+    font-size: 1.4rem;
+    border-bottom: #000 solid 1px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.video_sect .inner .inner_2 .video_box{
+    width:550px; height: 400px; 
+}
+/************************** icon_nav **************************/ 
+.icon_nav .inner{
+    width: 1110px;
+    padding-right: 25px;
+}
+.icon_nav ul{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 80px 0 50px 0;
+}
+.icon_nav ul li{
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: 500;
+}
+.icon_nav ul li a:hover{
+    color: #f29100;
+    font-weight: 700;
+}
+.icon_nav ul li img{
+    width: 75px;
+}
+/************************** activity_sect **************************/ 
+.activity_sect{
+    height: 1033px;
+    background-color: #1b71c7;
+    background-image: url(../images/activity_frame.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+}
+.activity_sect .arrow{
+    margin-top: 150px;
+    padding: 7px 20px 5px 17px;
+    border-radius: 55px;
+}
+.activity_sect .arrow:hover{
+    background-color: #ccdcec;
+}
+.activity_sect .inner{
+    position: relative;
+}
+.activity_sect .inner #title{
+    width: 250px;
+    color: #004f9e;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 8px 10px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    margin: 40px 0 0 475px; 
+    font-size: 1.4rem;   
+}
+.activity_sect .inner span{
+    font-family: 'Tenada', sans-serif;
+    font-size: 1.8rem;
+}
+.activity_sect .inner span #title2{
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+.activity_sect .inner ul{
+    width: 1200px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 320px;
+}
+.activity_sect .inner ul li{
+    width: 15%;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px 0 16px 0;
+    font-size: 1.3rem;
+}
+.activity_sect .inner ul li:hover{
+    color: #004f9e;
+    background-color: #fff;
+    font-weight: 600;
+    
+}
+.activity_sect .inner .inner_2{
+    max-width: 1110px;
+    height: 430px;
+    padding-top: 70px;
+    margin: 0 auto;
+}
+.activity_sect .inner .inner_2 .txt_box{
+    width: 42%;
+    display: block;
+    float: right;    
+}
+.activity_sect .inner .inner_2 .txt_box span{
+    font-family: 'Tenada', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.activity_sect .inner .inner_2 .txt_box p{
+    font-size: 1.1rem;
+}
+.activity_sect .inner .inner_2 .txt_box #eng_txt{
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #fff;
+    padding-bottom: 5px;
+}
+
+/************************** tour_info **************************/ 
+.tour_info .inner{
+    padding: 100px 0;
+    position: relative;
+}
+.tour_info #p_logo{
+    position: absolute;
+    top: -55px; left: 820px;
+}
+.tour_info p img{
+    width: 280px;
+}
+.tour_info .inner span{
+    font-family: 'Tenada', sans-serif;
+    font-size: 1.8rem;    
+}
+.tour_info .inner h2{
+    display: block; 
+    text-align: center;
+    margin-bottom: 50px;
+}
+.tour_info .inner .ways{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.tour_info .inner a{
+    width: 30%; height: 350px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    border: #004f9e 1px solid;
+    border-radius: 175px;    
+    font-weight: 700;
+    color: #fff;    
+}
+.tour_info .inner a .tour_pic{
+    height: 350px;
+}
+.tour_info .inner a .info_detail{
+    padding-top: 130px;
+    font-size: 1.2rem;
+}
+.tour_info .inner a .info_title{
+    font-size: 1.8rem;
+}
+.tour_info .ways div{
+    height: 350px;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.ways_img01:hover .ways_img01{
+    transform: translateY(-5%);
+    transition: 1s;
+}
+.ways:hover a{
+    box-shadow: 3px 3px 5px #666;
+}
+.tour_info .inner #ways_img01{
+    background-image: url(../images/street\ pic.png);
+    background-position: center;
+}
+.tour_info .inner #ways_img02{
+    background-image: url(../images/food\ pic.png);
+    background-position: center;
+}
+.tour_info .inner #ways_img03{
+    background-image: url(../images/bus\ pic.png);
+    background-position: center;
+}
+
+/************************** footer **************************/ 
+.footer1{
+    border-top: solid 1px #bbb;
+    border-bottom: solid 1px #bbb;
+}
+.footer1 .inner{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer1 ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0 9px 0;
+}
+.footer1 ul li a{
+    padding-right: 15px;
+    font-size: .8rem;
+}
+.footer1 p{
+    font-size: .8rem;
+    font-weight: 500;
+    border-left: solid 1px #bbb;
+    border-right: solid 1px #bbb;
+    padding: 11px 40px;
+}
+.footer1 p:hover{
+    color: #FFF;
+    background-color: #9bbee0;
+}
+.footer1 p img{
+    padding-left: 8px;
+    margin-top: 7px;
+}
+.footer2{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; align-items: center;
+    padding: 25px 0;
+}
+.footer2 h1 img{width: 120px;}
+.footer2 ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer2 ul .mini_icon{
+    width: 18px;
+
+}
+.footer2 ul li{
+    width: 140px;
+}
+.footer2 ul .inner_li1{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.footer2 ul .inner_li2{font-size: 0.8rem;}
+.footer3{
+    padding: 8px 0;
+    background-color: #ccdcec;
+    color: #004f9e;
+    text-align: center;
+    font-size: .8rem;
+}
