@@ -5,24 +5,11 @@
   top: 0px;
   left: 0px;
   position: fixed;
-  padding: 10px;
   z-index: 999;
 }
 .smallbar {
   height: 50px;
   background-color: #fff;
-}
-#banner .logo {
-  width: 30%;
-  margin-bottom: 0;
-  display: inline-block;
-  vertical-align: middle;
-}
-#banner #gnb-box {
-  width: 60%;
-  margin-bottom: 0;
-  display: inline-block;
-  vertical-align: middle;
 }
 .smallbar .menu a.active {
   font-weight: bold;

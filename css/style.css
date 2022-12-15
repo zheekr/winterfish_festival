@@ -27,105 +27,196 @@ a{
     margin: 0 auto;
 }
 /************************** header **************************/ 
-header{background-color: rgba(255, 255, 255, .3);}
+header{
+    background-color: rgba(255, 255, 255, .3);
+    width: 100%;    
+    height: 90px;
+    z-index: 999;
+}
+        .smallbar {
+            height: 90px;
+            background-color: #fff;
+        }
+        .smallbar .menu a.active {
+            font-weight: bold;
+        } /* .samll bar는 scrollfix js와 연결*/
+
 header .inner{
+    height: 90px;
     display: flex;
-    height: 80px;
     flex-wrap: nowrap;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;   
+}
+header h1{
+    width: 20%;
 }
 header h1 img{
     position: relative;
-    width: 25%;  
-    margin-top: 10px;           
+    width: 45%;  
+    padding-top: 20px;           
 }          
-header .inner ul{
-    width: 70%;               
+header .inner #gnb-box{
+    width: 60%;
+    height: 90px;          
+}
+header .inner #gnb-box > ul{
     display: flex;
-    justify-content: space-between;                
-    font-size: 1.2rem;
-    font-weight: 500; 
-}
-header .inner ul li{
-    font-size: 1.4rem;
-}
-header .inner ul li a:hover{
-    color: #f29100;    
-}
-
-header .inner .nav_btn a:nth-child(1){
-    position: relative;
-    margin: 0 15px 10px 0;
-    padding: 9px 8px;    
-    border-radius: 60%;
-    background-color: #52575d;
-    color: #FFF;
-    font-size: .8rem;
+    justify-content: space-around;
+    align-items: center;
     font-weight: 500;
-}    
-header .inner .nav_btn a:nth-child(2){
-    position: relative;
-    width: 15px;
-    top: 3px;
+    font-size: 1.2rem;
+}
+header .inner #gnb-box > ul > li{
+    width: 33.33%;
+    text-align: center;
+    padding-top: 30px;
+}
+header .inner .nav_btn{
+    width: 20%;
+}
+header .inner .nav_btn #btn1{
+    float: right;
+    padding: 5px 10px;
+    border-radius: 25px;
+    border: #999 solid .5px;
+    background-color: rgba(255, 255, 255, .3);
+    margin-right: 20px;
+}
+header .inner .nav_btn #btn2{
+    float: right;   
+    margin-top: 5px;
+}
+/************************** header_menu drop **************************/ 
+#gnb-box > ul > li > ul {
+    margin-left: 9px;
+    margin-top: 40px;
+    width: 100%; 
+    display: none;
+    height: 200px;
+    opacity: 0;
+    position: relative; 
+    top: 50px;  
+    z-index: 25;
+}
+#gnb-box > ul > li > a{
+    width: 100%; padding: 8px 10px;
+}
+header:hover{
+    background-color: #fff;
+    opacity: 1;
+}
+#gnb-box li a:hover{
+    color: #f29100;
+}
+#gnb-box > ul::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 90px;
+    height: 200px;
+    border-bottom: solid 3px #f29100;
+    background-color: #FFF; 
+    opacity: 1;
+    width: 100%;
+    z-index: 20;
+    display: none;
+}
+#gnb-box > ul:hover::before{
+    display: block;
+    transition: 1s;
+}
+#gnb-box > ul:hover > li > ul{
+    display: block;
+    
 }
 /************************** main_slide **************************/ 
+/**** commnon.css와 연결되어 있음 ****/ 
 .main_slide{
-    height: 840px;
-    text-align: center;
-}
-.main_slide img{
-    width: 100%;
-    height: 100%;
+    height: 840px;   width: 1920px;
+    position: relative;
+    margin: 0 auto;
     overflow: hidden;
 }
-/************************** mid_banner **************************/ 
-.mid_banner{
-    background-color: #e1edfa;
-}
-.mid_banner .inner{
-    position: relative;
-    padding: 10px 0;
-}
-.mid_banner .inner img:nth-child(1){
-    display: inline-block;
-    width: 60px;
+.main_slide .main_tit_box{
+    width: 500px;
+    margin: 0 auto;
     position: absolute;
-    top: 13px; left: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.mid_banner .inner img:nth-child(2){
-    display: inline-block;
-    width: 80px;
-    position: absolute;
-    top: 50px; left: 950px;    
-}
-.mid_banner .inner p{
-    display: block;
-    color: #004f9e;
+.main_slide .main_tit_box p{
+    color: #FFF;
     text-align: center;
     padding: 3px 0;
     font-size: 1.2rem;
 }
-.mid_banner .inner #title_discript{
+.main_slide .main_tit_box #title_discript{
     padding-bottom: 1px;
 }
-.mid_banner .inner #title_name{
+.main_slide .main_tit_box #title_name{
     font-size: 2.5rem;
 }
-.mid_banner .inner span{
+.main_slide .main_tit_box span{
     font-family: 'Tenada', sans-serif;
 }
+/************************** mid_icon_nav **************************/ 
+.icon_nav{
+    background-color: #e1edfa;
+}
+.icon_nav .inner{
+    width: 1110px;
+    padding: 25px 0;
+    position: relative;
+}
+.icon_nav .inner > img:nth-child(1){
+    display: inline-block;
+    width: 60px;
+    position: absolute;
+    top: 20px; left: 80px;
+}
+.icon_nav .inner > img:nth-child(2){
+    display: inline-block;
+    width: 80px;
+    position: absolute;
+    top: 70px; left: 900px;    
+}
+.icon_nav .inner ul{
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;    
+}
+.icon_nav ul li{
+    width: 80px;    
+    text-align: center;
+    font-weight: 500;
+    z-index: 91;
+}
+.icon_nav ul li .icon_img{
+    width: 80px;
+    padding: 0; margin: 0;
+}
+.icon_nav ul li a:hover{
+    color: #f29100;
+    font-weight: 700;
+}
+
 /************************** video_sect **************************/ 
 .video_sect .inner{
     position: relative;
+    padding: 80px 0;
 }
 .video_sect .inner img, .video_sect .inner .inner_2 p{
     display: inline-block;
 }
 .video_sect .inner img:nth-child(1){
-    width: 250px;
+    width: 200px;
     position: absolute;
-    top: -26px; left: 280px;
+    top: 160px; left: 330px;
 }
 .video_sect .inner img:nth-child(2){
     width: 80px;
@@ -152,7 +243,7 @@ header .inner .nav_btn a:nth-child(2){
 .video_sect .inner .inner_2 .txt_box{
     display: inline-block;
     width: 37%;
-    padding-top: 300px;
+    padding-top: 280px;
     font-size: 1.1rem;
 }
 .video_sect .inner .inner_2 .txt_box span{
@@ -170,32 +261,7 @@ header .inner .nav_btn a:nth-child(2){
 .video_sect .inner .inner_2 .video_box{
     width:550px; height: 400px; 
 }
-/************************** icon_nav **************************/ 
-.icon_nav .inner{
-    width: 1110px;
-    padding-right: 25px;
-}
-.icon_nav ul{
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 80px 0 50px 0;
-}
-.icon_nav ul li{
-    width: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    font-weight: 500;
-}
-.icon_nav ul li a:hover{
-    color: #f29100;
-    font-weight: 700;
-}
-.icon_nav ul li img{
-    width: 75px;
-}
+
 /************************** activity_sect **************************/ 
 .activity_sect{
     height: 1033px;
@@ -204,17 +270,29 @@ header .inner .nav_btn a:nth-child(2){
     background-repeat: no-repeat;
     background-position: center;
     color: #fff;
-    padding: 50px 100px;
+    padding: 80px 100px;
     display: flex;
     align-items: center;
 }
+.activity_sect .arrow > img{
+    width: 15px;
+    padding-left: 2px;
+    padding-bottom: 15px;
+}
 .activity_sect .arrow{
-    margin-top: 150px;
-    padding: 7px 20px 5px 17px;
-    border-radius: 55px;
+    width: 30px; height: 30px;
+    padding: 7px 9px 12px 9px;
+    border-radius: 45px;
 }
 .activity_sect .arrow:hover{
     background-color: #ccdcec;
+}
+.activity_sect .activity_tab{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 300px;
 }
 .activity_sect .inner{
     position: relative;
@@ -241,12 +319,11 @@ header .inner .nav_btn a:nth-child(2){
     margin: 20px 0;
 }
 .activity_sect .inner ul{
-    width: 1200px;
+    width: 1100px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 320px;
 }
 .activity_sect .inner ul li{
     width: 15%;
@@ -271,7 +348,8 @@ header .inner .nav_btn a:nth-child(2){
 .activity_sect .inner .inner_2 .txt_box{
     width: 42%;
     display: block;
-    float: right;    
+    float: right;  
+    padding-top: 50px;  
 }
 .activity_sect .inner .inner_2 .txt_box span{
     font-family: 'Tenada', sans-serif;
@@ -287,79 +365,6 @@ header .inner .nav_btn a:nth-child(2){
     margin-bottom: 20px;
     border-bottom: solid 1px #fff;
     padding-bottom: 5px;
-}
-
-/************************** tour_info **************************/ 
-.tour_info .inner{
-    padding: 100px 0;
-    position: relative;
-}
-.tour_info #p_logo{
-    position: absolute;
-    top: -55px; left: 820px;
-}
-.tour_info p img{
-    width: 280px;
-}
-.tour_info .inner span{
-    font-family: 'Tenada', sans-serif;
-    font-size: 1.8rem;    
-}
-.tour_info .inner h2{
-    display: block; 
-    text-align: center;
-    margin-bottom: 50px;
-}
-.tour_info .inner .ways{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-.tour_info .inner a{
-    width: 30%; height: 350px;
-    text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
-    border: #004f9e 1px solid;
-    border-radius: 175px;    
-    font-weight: 700;
-    color: #fff;    
-}
-.tour_info .inner a .tour_pic{
-    height: 350px;
-}
-.tour_info .inner a .info_detail{
-    padding-top: 130px;
-    font-size: 1.2rem;
-}
-.tour_info .inner a .info_title{
-    font-size: 1.8rem;
-}
-.tour_info .ways div{
-    height: 350px;
-    background-color: rgba(0,0,0,0.3);
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-.ways_img01:hover .ways_img01{
-    transform: translateY(-5%);
-    transition: 1s;
-}
-.ways:hover a{
-    box-shadow: 3px 3px 5px #666;
-}
-.tour_info .inner #ways_img01{
-    background-image: url(../images/street\ pic.png);
-    background-position: center;
-}
-.tour_info .inner #ways_img02{
-    background-image: url(../images/food\ pic.png);
-    background-position: center;
-}
-.tour_info .inner #ways_img03{
-    background-image: url(../images/bus\ pic.png);
-    background-position: center;
 }
 
 /************************** footer **************************/ 
